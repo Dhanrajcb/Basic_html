@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive RGBA Color Picker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .color-box {
+      width: 300px;
+      height: 150px;
+      margin: 20px auto;
+      border: 3px solid #ccc;
+      border-radius: 10px;
+      line-height: 150px;
+      font-weight: bold;
+      font-size: 20px;
+      color: black;
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    .slider-container {
+      width: 300px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    .slider-label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎨 RGBA Color Changer</h1>
+
+  <div class="color-box" id="colorBox">rgba(0, 0, 0, 1)</div>
+
+  <div class="slider-container">
+    <div class="slider-label">🔴 Red: <span id="redVal">0</span></div>
+    <input type="range" id="redSlider" min="0" max="255" value="0">
+
+    <div class="slider-label">🟢 Green: <span id="greenVal">0</span></div>
+    <input type="range" id="greenSlider" min="0" max="255" value="0">
+
+    <div class="slider-label">🔵 Blue: <span id="blueVal">0</span></div>
+    <input type="range" id="blueSlider" min="0" max="255" value="0">
+
+    <div class="slider-label">⚪ Alpha: <span id="alphaVal">1.0</span></div>
+    <input type="range" id="alphaSlider" min="0" max="100" value="100">
+  </div>
+
+  <script>
+    const redSlider = document.getElementById("redSlider");
+    const greenSlider = document.getElementById("greenSlider");
+    const blueSlider = document.getElementById("blueSlider");
+    const alphaSlider = document.getElementById("alphaSlider");
+
+    const colorBox = document.getElementById("colorBox");
+
+    const redVal = document.getElementById("redVal");
+    const greenVal = document.getElementById("greenVal");
+    const blueVal = document.getElementById("blueVal");
+    const alphaVal = document.getElementById("alphaVal");
+
+    function updateColor() {
+      const r = redSlider.value;
+      const g = greenSlider.value;
+      const b = blueSlider.value;
+      const a = (alphaSlider.value / 100).toFixed(2); // Convert to 0–1
+
+      redVal.textContent = r;
+      greenVal.textContent = g;
+      blueVal.textContent = b;
+      alphaVal.textContent = a;
+
+      const rgbaColor = `rgba(${r}, ${g}, ${b}, ${a})`;
+      colorBox.style.backgroundColor = rgbaColor;
+      colorBox.textContent = rgbaColor;
+    }
+
+    redSlider.addEventListener("input", updateColor);
+    greenSlider.addEventListener("input", updateColor);
+    blueSlider.addEventListener("input", updateColor);
+    alphaSlider.addEventListener("input", updateColor);
+
+    updateColor(); // Set default color
+  </script>
+
+</body>
+</html>
