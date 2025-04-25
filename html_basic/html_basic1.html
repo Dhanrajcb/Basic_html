@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My page title</title>
+    <!-- The link tag with rel= icon is used to add favicon or logo  -->
+    <link rel="icon" type="image/png" href="html_logo.png" />
+    <!-- <style>
+      body {
+        background-image: url(tiger.webp);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* background-size: cover; */
+        background-size: 100% 100%;
+      }
+    </style> -->
+  </head>
+  <body>
+    <p style="background-image: url(book.jpeg)">
+      This is bg image for paragraph
+    </p>
+
+    <!-- Picture tag used to fit in multiple screen size-->
+    <picture>
+      <source media="(min-width: 650px)" srcset="tiger.webp" />
+      <source media="(min-width: 465px)" srcset="book.jpeg" />
+      <img src="manorama-college.jpg" alt="" />
+    </picture>
+  </body>
+</html>
