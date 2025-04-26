@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Full Table Example</title>
+    <h1>The Table</h1>
+    <style>
+      table {
+        width: 60%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: center;
+      }
+      colgroup col:first-child {
+        background-color: #f2f2f2;
+      }
+      thead {
+        background-color: #ccc;
+      }
+      tfoot {
+        background-color: #eee;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The Table -->
+    <table>
+      <caption>
+        Monthly Sales Report
+      </caption>
+
+      <colgroup>
+        <col span="1" />
+        <col span="1" style="background-color: #dff0d8" />
+        <col span="1" style="background-color: #fcf8e3" />
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Sales</th>
+          <th>Profit</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td>$10,000</td>
+          <td>$2,500</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>$12,000</td>
+          <td>$3,000</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>$22,000</td>
+          <td>$5,500</td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+    <hr />
+    <!-- Discription List -->
+    <h1>Discription List Example</h1>
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+    <hr />
+    <hr />
+    <!-- order list -->
+    <h1>OrderList Example</h1>
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <hr />
+    <hr />
+    <!-- Unorder list -->
+    <h1>UnorderList Example</h1>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <hr />
+    <hr />
+    <!-- Div -->
+    <h1>Using Div tag</h1>
+    <div>
+      <h2>School</h2>
+      <p>college</p>
+      <p>university</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="animateSkills()">
+    <h1><i class="fas fa-laptop-code"></i> Welcome to My Portfolio</h1>
+
+    <div class="section">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <p>
+        Hello! I'm <strong>[Your Name]</strong>, a passionate developer who
+        enjoys building web applications, exploring new tech, and solving
+        real-world problems with code.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+      <ul>
+        <li>
+          <strong>To-Do App</strong> – A clean to-do list using JavaScript<br />
+          <a href="https://example.com/project-one" class="button"
+            ><i class="fas fa-eye"></i> View Project</a
+          >
+        </li>
+        <li>
+          <strong>Blog Site</strong> – Personal blog with HTML & Markdown<br />
+          <a href="https://example.com/project-two" class="button"
+            ><i class="fas fa-eye"></i> View Project</a
+          >
+        </li>
+        <li>
+          <strong>Weather App</strong> – Live weather using API<br />
+          <a href="https://example.com/project-three" class="button"
+            ><i class="fas fa-eye"></i> View Project</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-tools"></i> Skills</h2>
+
+      <div class="skill">
+        <div class="skill-name"><i class="fab fa-html5"></i> HTML</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 90%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name"><i class="fab fa-css3-alt"></i> CSS</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">
+          <i class="fab fa-js-square"></i> JavaScript
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 75%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name"><i class="fab fa-python"></i> Python</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 70%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">
+          <i class="fab fa-git-alt"></i> Git & GitHub
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width: 80%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-envelope-open-text"></i> Contact</h2>
+      <p class="contact-icons">
+        <i class="fas fa-envelope"></i>Email:
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+      </p>
+      <p class="contact-icons">
+        <i class="fab fa-github"></i>GitHub:
+        <a href="https://github.com/yourusername" target="_blank"
+          >github.com/yourusername</a
+        >
+      </p>
+      <p class="contact-icons">
+        <i class="fab fa-linkedin"></i>LinkedIn:
+        <a href="https://linkedin.com/in/yourusername" target="_blank"
+          >linkedin.com/in/yourusername</a
+        >
+      </p>
+    </div>
+
+    <!-- Animate skill bars on load -->
+    <script>
+      function animateSkills() {
+        const bars = document.querySelectorAll(".skill-bar-fill");
+        bars.forEach((bar) => {
+          const width = bar.style.width;
+          bar.style.width = "0";
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 200);
+        });
+      }
+    </script>
+  </body>
+</html>

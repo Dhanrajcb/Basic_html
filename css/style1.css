@@ -1,0 +1,22 @@
+h1{
+    color:orange;
+    background-color:blue;
+    border: 6px solid red;
+    font-size: 40px;
+    font-weight: 600;
+}
+p {
+    color:blue
+}
+
+/* This is a comment */
+/* h1{
+    color: #000;
+} */
+
+marquee{
+    color:black;
+    font-size: 60px;
+    font: bold;
+    
+}
