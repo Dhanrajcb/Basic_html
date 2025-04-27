@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Hey It's Dhanraj...Don't just see the code ,execute it...copy the code and folder and run it -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment1</title>
+    <!-- The link tag with rel= icon is used to add favicon or logo -->
+    <link rel="icon" href="images/assignment_logo.png" type="image/png" />
+    <!-- The style tag is used to add css -->
+    <style>
+      #chhota_bheem {
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+      }
+      .intro {
+        color: yellow;
+        background-color: black;
+        text-align: center;
+        font-family: cursive;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <!-- The h1 tag is used to add heading -->
+  <h1 class="intro">
+    <marquee behavior="alternate" direction="right"
+      >This is a page related to the famous
+      <b>Chhota Bheem </b> cartoon</marquee
+    >
+  </h1>
+  <body>
+    <img id="chhota_bheem" src="images/chhota_bheem.jpeg" alt="chhota_bheem" />
+    <p>
+      Chhota Bheem is an Indian animated comedy adventure television series,
+      created by Green Gold Animations based in Hyderabad. This show is
+      available in English, Hindi, Telugu, Tamil, Kannada, Malayalam and
+      Marathi. Bheem is a brave, strong and intelligent young boy. He often
+      manages to solve everyone's problems which endears him to the townspeople
+      of Dholakpur.
+    </p>
+
+    <h4>List of Main Characters</h4>
+    <!-- The ol tag is used to add ordered list -->
+    <ol>
+      <li>Chhota Bheem</li>
+      <li>Chutki</li>
+      <li>Raju</li>
+      <li>Kalia</li>
+      <li>Jaggu</li>
+      <li>Dholu-Bholu</li>
+    </ol>
+    <h4>List of sub Characters</h4>
+    <!-- The ul tag is used to add unordered list -->
+    <ul>
+      <li>Indumati</li>
+      <li>Raja Indra Verma</li>
+      <li>Tun Tun Mousi</li>
+      <li>Shivani</li>
+    </ul>
+    <h4>Table of Characters</h4>
+    <!-- The table tag is used to add table -->
+    <table>
+      <tr>
+        <th>Character</th>
+        <th>Description</th>
+        <th>Personality</th>
+        <th>Special Powers</th>
+      </tr>
+      <tr>
+        <td>Chhota Bheem</td>
+        <td>The main protagonist, a young boy with superhuman strength</td>
+        <td>Brave, kind, and determined</td>
+        <td>Superhuman strength, agility, and endurance</td>
+      </tr>
+      <tr>
+        <td>Raju</td>
+        <td>Chhota Bheem's best friend, a clever and resourceful boy</td>
+        <td>Intelligent, loyal, and quick-witted</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Jaggu</td>
+        <td>A talking monkey and Chhota Bheem's loyal companion</td>
+        <td>Playful, mischievous, and loyal</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Kalia</td>
+        <td>The main antagonist, a bully and a rival of Chhota Bheem</td>
+        <td>Arrogant, selfish, and manipulative</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Indumati</td>
+        <td>A kind and gentle princess who is a friend of Chhota Bheem</td>
+        <td>Kind, compassionate, and brave</td>
+        <td>None</td>
+      </tr>
+    </table>
+    <p>click the below link to know about more</p>
+    <!-- The a tag is used to add link -->
+    <a href="https://en.wikipedia.org/wiki/Chhota_Bheem">Click hear</a>
+
+    <h4>
+      The below is the Clickable Image,You can click on the Character to know
+      more about this
+    </h4>
+    <img
+      src="images/click_bheem.jpeg"
+      alt="clickable_img"
+      usemap="#chhota_bheem"
+    />
+    <!-- The map tag is used to add map -->
+    <map name="chhota_bheem">
+      <area
+        shape="rect"
+        coords="153,10,211,62"
+        href="chhota_bheem.html"
+        alt="chhota_bheem"
+      />
+      <!-- The area tag is used to add area -->
+      <area
+        shape="rect"
+        coords="212,33,248,67"
+        href="chutki.html"
+        alt="chutki"
+      />
+      <area shape="rect" coords="79,54,108,86" href="raju.html" alt="raju" />
+      <area shape="rect" coords="255,55,276,81" href="jaggu.html" alt="jaggu" />
+      <area shape="rect" coords="125,36,151,62" href="kalia.html" alt="kalia" />
+      <area
+        shape="rect"
+        coords="45,63,66,90"
+        href="dholu_bholu.html"
+        alt="dholu_bholu"
+      />
+      <area
+        shape="rect"
+        coords="284,62,315,84"
+        href="dholu_bholu.html"
+        alt="dholu_bholu"
+      />
+    </map>
+    <hr />
+    <hr />
+
+    <h2>Responsive Picture</h2>
+    <!-- The picture tag is used to add picture -->
+    <picture>
+      <source srcset="images/chutki.jpeg" media="(max-width: 650px)" />
+      <source srcset="images/raju.jpeg" media="(min-width: 465px)" />
+      <img src="images/chhota_bheem1.jpeg" alt="chhota_bheem" style="" />
+      />
+    </picture>
+  </body>
+</html>
