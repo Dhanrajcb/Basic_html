@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <link rel="icon" href="images/collage_logo.png" type="image/png" />
+    <style>
+        body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url(images/manorama-college.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-position: center;
+
+    color: #4d3319;
+  }
+      header {
+        background-color: lightblue;;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        background-color: lightgray;
+        padding: 10px;
+        text-align: center;
+      }
+      nav a {
+        text-decoration: none;
+        margin-right: 10px;
+        color: black;
+        font-weight: bold;
+      }
+      main {
+        padding: 20px;
+        background-color: burlywood;
+        margin: auto;
+        max-width: 800px;
+      }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+          
+        }
+        footer {
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center; 
+        }
+        .submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .submit:hover {
+            background-color: #45a049;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="checkbox"],input[type="radio"]
+        { 
+          margin-right: 5px;
+
+        }
+        h4{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        .logo {
+           width: 250px;
+           display: flex;
+           flex-direction: left;
+          margin-right: 20px;
+          margin-top: -100px;
+        }
+        .inlign-group {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        marquee {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            font-speed: 5s;
+            font-style: italic;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- This is a assignment of simple layout page using using different types of Form -->
+    <header>
+      <h1>Manoram College of Computer Application</h1>
+      <h4>Admission Form</h4>
+      <img class="logo" src="images/collage_logo.png" alt="logo">
+      <h4><marquee behavior="alternate" direction="left">Addmission Open</marquee></h4>
+    </header>
+    <nav>
+      <a href="https://manoramacollege.edu.in/about-us-overview/">About</a>
+      <a href="https://manoramacollege.edu.in/admission-process/"
+        >Admission Process</a
+      >
+      <a href="https://manoramacollege.edu.in/contact/">contact</a>
+    </nav>
+    <main>
+      <h4>Fill the Details</h4>
+      <form action="#" method="get">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required /><br /><br />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required /><br /><br />
+
+        <label for="gender">Gender:</label>
+        <div>
+          <div class="inlign-group">
+        <input type="radio" id="male" name="gender" value="male" required />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required />
+        <label for="female">Female</label><br /><br />
+        </div>
+        </div>
+
+        <label for="address">Address:</label><br />
+        <textarea id="address" name="address" rows="4" cols="50"></textarea
+        ><br /><br />
+
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+          <option value="bca">BCA</option>
+          <option value="mca">MCA</option>
+          <option value="bba">BBA</option>
+          <option value="mba">MBA</option></select
+        ><br /><br />
+
+        <label for="hobbies">Hobbies:</label>
+        <div>
+          <div class="inlign-group">
+        <input type="checkbox" id="reading" name="hobbies" value="reading" />
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="writing" name="hobbies" value="writing" />
+        <label for="writing">Writing</label>
+        <input type="checkbox" id="playing" name="hobbies" value="playing" />
+        <label for="playing">Playing</label><br /><br />
+        </div>
+        </div>
+        <br><br>
+
+        <label for="password">Create Password:</label><input type="password"></label><br><br>
+
+        <label for="id_proof">Upload ID Proof:</label><input type="file"></label><br><br>
+
+
+        <label for="submit">Click to Submit</label>
+        <input class="submit" type="submit" value="Submit" />
+      </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Manorama College of Computer Application</p>
+        <p>All rights reserved.</p>
+        <p>Contact: +91 1234567890</p>
+    </footer>
+  </body>
+</html>

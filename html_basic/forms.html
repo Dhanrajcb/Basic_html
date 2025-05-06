@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      <!-- input type="text" -->
+      <h1>Simple fields</h1>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" />
+      <br />
+      <br />
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" />
+      <hr />
+    </form>
+
+    <!-- textarea field -->
+    <h1>TextArea field</h1>
+    <form action="#">
+      <label for="message">Message</label>
+      <br />
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <hr />
+
+    <!-- Drop done menu -->
+    <h1>Drop down menu</h1>
+    <form action="get">
+      <!-- get or post are the methods -->
+      <label for="fruit">Select a Fruit</label>
+      <select id="fruit" name="fruit">
+        <option value="">Select one Fruit</option>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="orange">Orange</option>
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <hr />
+
+    <!-- Radio buttons -->
+    <h1>Radio buttons</h1>
+    <input type="radio" name="gender" id="male" value="male" />
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="female" />
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="other" value="other" />
+    <label for="other">Other</label>
+    <hr />
+
+    <!-- Check boxes -->
+    <h1>Check boxes</h1>
+    <form method="get">
+      <label>
+        <input type="checkbox" name="vehicle1" value="Bike" /> I have a bike
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" name="vehicle2" value="Car" /> I have a car
+      </label>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <!-- passward -->
+    <h1>Password</h1>
+    <form>
+      Username: <input type="text" name="username" /><br />
+      Password: <input type="password" name="password" />
+      <br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+    <hr />
+
+    <!-- File upload -->
+    <h1>File upload</h1>
+    <form>
+      Select File:<input type="file" name="file" accept="image/*" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <hr />
+
+    <!-- Button control -->
+    <h1>Button control</h1>
+    <form>
+      <input type="button" value="Click Me" name="button" /><br />
+      <input type="submit" value="Submit" name="submit" /><br />
+      <input type="reset" value="Reset" name="reset" /><br />
+      <input
+        type="image"
+        src="images/tiger.webp"
+        alt="Submit"
+        name="image"
+        style="height: 30px; width: 30px"
+      />
+    </form>
+    <hr />
+
+    <!-- Hidden field -->
+    <h1>Hidden field</h1>
+    <form>
+      <input type="hidden" name="hidden" value="hidden" />
+      <input type="submit" value="Submit" name="submit" />
+    </form>
+    <br />
+  </body>
+</html>
