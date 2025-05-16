@@ -1,0 +1,17 @@
+{
+  "name": "tailwind_css",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Dhanraj",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": " npx tailwindcss -i ./src/input.css -o ./output/output.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./output/output.css --watch"
+
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

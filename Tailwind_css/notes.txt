@@ -1,0 +1,29 @@
+npm init -> to install package.json
+npm install -D tailwindcss@3.4.1 -> to install dependency -> it install package-lock.json
+npx tailwindcss init -> to install tailwind.config.js
+open tailwind.config.js file -> in this we should chande the content path ["./*.html"]
+
+create a folder src in the root folder and in the that create a input.css file
+In input.css file import  the packages 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+create a output folder in root folder
+in output folder create a output.css file-> This folder contain the ganrated css file
+
+create index.html file in root directory
+write the code for index file
+
+
+
+
+*)compilation process
+ npx tailwindcss -i ./src/input.css -o ./output/output.css -> used to compile the index page to run it.
+
+ in package.json remove text and add "build": " npx tailwindcss -i ./src/input.css -o ./output/output.css"
+
+ after this in tarminal type npm run build -> to compile the code and run
+
+ in package.json if we add below build it will monitor the changes in the file->"watch": "npx tailwindcss -i ./src/input.css -o ./output/output.css --watch"
+ after adding run-> npm run watch

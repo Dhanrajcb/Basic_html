@@ -1,0 +1,456 @@
+<!-- <!-- Border Exercise 1: Creating a Card with Solid Borders and Padding
+Instructions:
+
+Apply a border width of 2px on all sides and a border color of gray with a shade of 300 on the article element.
+
+Apply a border width of 2px on the bottom and a border color of gray with a shade of 300 on the header element.
+
+Apply a border width of 2px on the top and a border color of gray with a shade of 300 on the footer element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solid Border Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-8 bg-gray-100 text-gray-900">
+    <article
+      class="w-full max-w-md mx-auto p-6 bg-white border-2 border-gray-300"
+    >
+      <header class="mb-4 pb-2 border-b-2 border-gray-300">
+        <h2 class="text-2xl font-semibold text-gray-800">Solid Border Card</h2>
+      </header>
+
+      <section class="mb-6">
+        <p class="text-lg text-gray-600">
+          This card demonstrates how to use solid borders and internal spacing
+          to create clean, structured layouts with Tailwind CSS. Focus on the
+          balance between typography, borders, and spacing.
+        </p>
+      </section>
+
+      <section class="mb-6">
+        <ul
+          class="list-disc list-inside text-base text-gray-700 leading-relaxed"
+        >
+          <li class="mb-2">Structured layout with borders</li>
+          <li class="mb-2">Proper spacing and typography</li>
+          <li class="mb-2">Visually appealing design</li>
+        </ul>
+      </section>
+
+      <footer class="pt-4 border-t-2 border-gray-300">
+        <p class="text-base text-gray-700">
+          The combination of solid borders and carefully applied spacing creates
+          a visually balanced layout.
+        </p>
+      </footer>
+    </article>
+  </body>
+</html>
+-->
+
+<!--
+Border Exercise 2: Designing a Testimonial Section with Rounded Borders
+Instructions:
+
+Apply a border width of 4px on the left and a border color of gray with a shade of 400 on the blockquote element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designing a Testimonial Section with Rounded Borders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-10 bg-gray-100 text-gray-900">
+    <article
+      class="w-full max-w-3xl mx-auto p-8 bg-white border-2 border-gray-300 rounded-lg"
+    >
+      <header class="mb-6 border-b-2 border-gray-300 pb-4">
+        <h2 class="text-3xl font-bold text-gray-800">What Our Customers Say</h2>
+      </header>
+
+      <section class="mb-6">
+        <blockquote
+          class="p-6 mb-4 bg-gray-50 text-lg text-gray-700 italic border-l-4 border-gray-400"
+        >
+          "This is by far the best product I have ever used! The quality is
+          outstanding, and the customer service is beyond expectations. I highly
+          recommend it to everyone."
+        </blockquote>
+        <p class="text-lg text-gray-600">- John Doe, Satisfied Customer</p>
+      </section>
+
+      <footer class="border-t-2 border-gray-300 pt-4">
+        <p class="text-base text-gray-700">
+          Our customers' satisfaction is our top priority, and we are always
+          thrilled to hear their feedback.
+        </p>
+      </footer>
+    </article>
+  </body>
+</html>
+
+<!-- Border Exercise 3: Creating a Simple Info Box with Dotted Borders
+Instructions:
+
+Apply a border width of 4px on all sides, a border style of dotted and a border color of gray with a shade of 400 on the section element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info Box with Dotted Border</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-8 bg-gray-100 text-gray-900">
+    <section
+      class="max-w-lg mx-auto p-6 bg-white rounded-lg border-4 border-dotted border-gray-400"
+    >
+      <h2
+        class="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-300 pb-2"
+      >
+        Important Information
+      </h2>
+
+      <p class="text-base text-gray-600 mb-6">
+        This is a simple info box with a dotted border. You can use this style
+        to draw attention to important details or highlight specific information
+        that requires focus.
+      </p>
+
+      <ul class="list-disc list-inside text-gray-700">
+        <li class="mb-2">The dotted border gives a sense of distinction.</li>
+        <li class="mb-2">Clean and minimalistic design.</li>
+        <li class="mb-2">Perfect for highlighting key points or sections.</li>
+      </ul>
+    </section>
+  </body>
+</html>
+
+<!-- Background Exercise 1: Building a Gradient Hero Section
+Instructions:
+
+Apply a background gradient to right from the color blue with a shade of 500 to the color purple with a shade of 600 on the section element.
+
+Apply a background color of white on the anchor element.
+
+Solution Screenshot -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900 p-10">
+    <section
+      class="max-w-4xl mx-auto p-12 text-white rounded-lg border-4 border-white bg-linear-to-r from-blue-500 to-purple-600"
+    >
+      <div class="text-center">
+        <h1 class="text-4xl font-bold mb-6">Welcome to Our Platform</h1>
+        <p class="text-lg mb-8">
+          Discover amazing features and a vibrant community designed to empower
+          you.
+        </p>
+        <a
+          href="#"
+          class="inline-block text-blue-500 font-semibold text-lg py-3 px-6 rounded-lg bg-white"
+        >
+          Get Started
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- Background Exercise 2: Portfolio Section with Multi-Layered Background
+Instructions:
+
+Apply a background color of white and a 10% background opacity on all Project Containers. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <section
+      class="relative bg-cover bg-center bg-no-repeat p-16"
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2024/07/23/13/03/moon-8915307_1280.png');
+      "
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-gray-500 via-gray-700 to-gray-500 opacity-60"
+      ></div>
+      <div class="absolute inset-0 bg-gray-800 bg-opacity-40"></div>
+      <div class="relative p-16">
+        <h2 class="text-4xl font-bold text-white mb-6 text-center">
+          My Portfolio
+        </h2>
+        <p class="text-lg text-gray-200 max-w-3xl mx-auto text-center mb-8">
+          A collection of my recent projects showcasing skills in web
+          development, design, and creativity. Take a look at some of my best
+          work below.
+        </p>
+        <!-- Project 1 -->
+        <div class="p-6 rounded-lg border border-gray-300 mb-8 bg-white/90">
+          <h3 class="text-xl font-semibold mb-4">Project 1</h3>
+          <p class="text-gray-700">
+            A brief description of Project 1. This project demonstrates my
+            ability to develop and design responsive web applications.
+          </p>
+        </div>
+        <!-- Project 2 -->
+        <div class="p-6 rounded-lg border border-gray-300 mb-8 bg-white/90">
+          <h3 class="text-xl font-semibold mb-4">Project 2</h3>
+          <p class="text-gray-700">
+            A brief description of Project 2. This project showcases my skills
+            in UI/UX design and front-end development.
+          </p>
+        </div>
+        <!-- Project 3 -->
+        <div class="p-6 rounded-lg border border-gray-300 bg-white/90">
+          <h3 class="text-xl font-semibold mb-4">Project 3</h3>
+          <p class="text-gray-700">
+            A brief description of Project 3. This project highlights my ability
+            to create dynamic, interactive user interfaces.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- Background Exercise 3: Building a Blog Post Card with a Dual-Gradient Background
+Instructions:
+
+Apply a background gradient to bottom right from the color blue with a shade of 400 via the color purple with a shade of 500 to the color indigo with a shade of 600 on the Blog Post Card.
+
+Apply a background with the color of purple with a shade of 700 on the anchor element. -->
+
+<!-- Background Exercise 3: Building a Blog Post Card with a Dual-Gradient Background
+Instructions:
+
+Apply a background gradient to bottom right from the color blue with a shade of 400 via the color purple with a shade of 500 to the color indigo with a shade of 600 on the Blog Post Card.
+
+Apply a background with the color of purple with a shade of 700 on the anchor element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <section class="p-12 bg-indigo-100">
+      <!-- Blog Post Card -->
+      <div
+        class="max-w-lg mx-auto p-8 rounded-lg border border-indigo-400 bg-linear-to-br from-blue-400 to-purple-500 to-indigo-600"
+      >
+        <!-- Blog Title -->
+        <h2 class="text-3xl font-bold text-white mb-4">
+          How to Create Stunning Websites with Tailwind CSS
+        </h2>
+        <!-- Blog Description -->
+        <p class="text-lg text-indigo-100 mb-6">
+          Learn how to use Tailwind CSS to build responsive, modern websites
+          with ease. This tutorial will walk you through all the key concepts
+          and tips to enhance your workflow.
+        </p>
+        <!-- Read More Button -->
+        <button
+          class="inline-block text-lg font-semibold text-white py-3 px-6 rounded-lg bg-purple-700 active:bg-slate-500 active:text-slate-900"
+        >
+          <!-- remove active and put hover to apply hover -->
+          Read More
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
+
+
+<!--
+  --------------------------------------------------------------------------------------------------------------------------
+ |     (HOVER STATE)
+   -------------------------------------------------------------------------------------------------------------------------
+ |        hover:shadow-slate-500
+ |        hover:shadow-lg
+ |        hover:-translate-y-1       1-4pix like 1*4=4
+ |        transition
+ |        hover:scale-105
+  -------------------------------------------------------------------------------------------------------------------------
+ |      (ACTIVE STATE)               after clicking it's activated 
+ --------------------------------------------------------------------------------------------------------------------------
+ |          active:bg-slate-500 
+ |            active:text-slate-900
+ |     --------------------------------------------------------------------------------------------------------------------
+ |      (states )
+ --------------------------------------------------------------------------------------------------------------------------
+ |           form elemnt 
+ |              <form>
+ |                   <div class="">
+ |                           <label class=""for="email">Email</label>
+ |                           <input class="" type="email" required />
+ |                   </div>
+ |              </form>
+ |       ------------------------------------------------------------------------------------------------------------------
+ |      Required & Disabled 
+ --------------------------------------------------------------------------------------------------------------------------
+ |           (Focus) (input tag)
+ |           focus:bg-slate-500 
+ |           focus:text-white 
+ |           focus:outline-none
+ |     --------------------------------------------------------------------------------------------------------------------
+ |       (FOCUS WITHIN)
+ --------------------------------------------------------------------------------------------------------------------------
+ |             focus-within:shadow-xl 
+ |             focus-within:shadow-slate-500 
+ |             focus-within:scale-110
+ |     --------------------------------------------------------------------------------------------------------------------
+ |      (Disabled state)
+ --------------------------------------------------------------------------------------------------------------------------
+ |            disabled:bg-rose-700 
+ |            disabled:cursor-not-allowed 
+ |            disabled:opacity-10
+ |       this only works if you use disabled property in input tag
+ |     --------------------------------------------------------------------------------------------------------------------
+ |     (invalid State)
+ --------------------------------------------------------------------------------------------------------------------------
+ |           outline-none  
+ |           focus:bg-green-500 
+ |           focus:invalid:bg-red-400
+ |     ------------------------------------------------------------------------------------------------------------------------
+ |   -->
+
+
+<button class="hover: m-8 rounded border-2 border-white p-5 px-8 py-4 align-middle text-2xl 
+text-white hover:shadow-slate-500 transition hover:-translate-y-1 hover:scale-105 hover:shadow-lg active:bg-slate-500 active:text-slate-900">Button</button>
+<form class="flex flex-col gap-y-6 rounded px-6 py-4 transition focus-within:shadow-xl focus-within:shadow-slate-500 focus-within:scale-110">
+  <div class="flex flex-col gap-y-2">
+    <label class="text-xl text-white" for="name">Name</label>
+    <input class="w-96 rounded px-6 py-2 text-2xl focus:bg-slate-500 focus:text-white focus:outline-none" type="text" required />
+  </div>
+
+ <div class="flex flex-col gap-y-2">
+    <label class="text-xl text-white" for="Cellphone">Cellphone</label>
+    <input class="w-96 rounded px-6 py-2 text-2xl disabled:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-10 " type="text" disabled />
+  </div>
+
+   <div class="flex flex-col gap-y-2">
+    <label class="text-xl text-white" for="Email">Email</label>
+    <input class="w-96 rounded px-6 py-2 text-2xl outline-none  focus:bg-green-500 focus:invalid:bg-red-400 " type="email" required />
+  </div>
+</form>
+</body>
+<!-- paste the below code in css -->
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-700 h-screen flex flex-col justify-center items-center gap-y-5;
+  }
+}
+
+
+<hr>
+
+<!--
+  --------------------------------------------------------------------------------------------------------------------------
+ |     padding fo all list
+   -------------------------------------------------------------------------------------------------------------------------
+ |       *:py-2
+ |        when hover ul all element in the hover will be style 
+          need to convert group
+          group
+          slect all li by using holding alt click 
+          class="group-hover:text-slate-900
+          for heading do 
+          hover:text-gray-950
+          transition
+-------------------------------------------------------------------------------------------------------------------------
+ |      appiear state
+ --------------------------------------------------------------------------------------------------------------------------
+ |          create div element
+              in that creat lable for email
+              then input element  for email
+
+          input element class 
+             
+            px-6  py-2 w-96 
+            rounded outline-none 
+            focus:bg-sky-500 
+            focus:invalid:bg-red-700
+          
+          div class 
+             flex 
+            flex-col 
+             gap-y-3 
+             mx-8
+
+          lable class 
+            text-white 
+            text-xl
+
+|     --------------------------------------------------------------------------------------------------------------------
+ |      (create span elemnt  )
+ --------------------------------------------------------------------------------------------------------------------------
+ |          <span> Email is not valid </span>
+            add class to span
+            text-red-400 
+            text-sm 
+            invisible 
+            add peer to input class
+            peer-invalid:visible
+ |   -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul
+      class="group m-8 rounded bg-amber-600 px-12 py-8 text-white *:py-2 capitalize hover:text-slate-900 hover:bg-slate-300 transition"
+    >
+      <h1 class="text-2xl font-samibold">this is the heading</h1>
+      <li class="group-hover:text-slate-900">Lorem ipsum dolor sit amet.</li>
+      <li class="group-hover:text-slate-900">Lorem ipsum dolor sit amet.</li>
+      <li class="group-hover:text-slate-900">Lorem ipsum dolor sit amet.</li>
+      <li class="group-hover:text-slate-900">Lorem ipsum dolor sit amet.</li>
+      <li class="group-hover:text-slate-900">Lorem ipsum dolor sit amet.</li>
+      <li class="group-hover:text-slate-900">Lorem ipsum dolor sit amet.</li>
+      <li class="group-hover:text-slate-900">Lorem ipsum dolor sit amet.</li>
+      <li class="group-hover:text-slate-900">Lorem ipsum dolor sit amet.</li>
+    </ul>
+
+    <div class="flex flex-col gap-y-3 mx-8">
+      <label class="text-white text-xl" for="Email">Email</label>
+      <input
+        class="px-6 py-2 w-96 rounded outline-none focus:bg-sky-500 focus:invalid:bg-red-700 peer"
+        type="email"
+      />
+      <span class="text-red-400 text-sm invisible peer-invalid:visible">
+        Email is not valid</span
+      >
+    </div>
+  </body>
+</html>

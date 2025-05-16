@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Webpage with JavaScript</title>
+    <style>
+      /* Basic styles for the webpage */
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #slider {
+        width: 100%;
+        height: 300px;
+        background-color: #ddd;
+        text-align: center;
+        font-size: 24px;
+        line-height: 300px;
+        color: white;
+      }
+
+      .message-box {
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        display: none;
+      }
+
+      .real-time-update {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Webpage with JavaScript</h1>
+
+    <!-- Button to change text -->
+    <button onclick="changeText()">Click Me to Change Text</button>
+    <h2 id="greeting">Welcome to my website!</h2>
+
+    <!-- Button to show popup message -->
+    <button onclick="showPopup()">Show Pop-up Message</button>
+
+    <!-- Slider example -->
+    <div id="slider">Slide to Next Message</div>
+    <button onclick="changeSlide()">Change Slider Message</button>
+
+    <!-- Real-Time Updates (Input and Update) -->
+    <div class="real-time-update">
+      <label for="nameInput">Enter your name: </label>
+      <input type="text" id="nameInput" oninput="updateName()" />
+      <p id="nameDisplay">Your name will appear here.</p>
+    </div>
+
+    <!-- Message Box (Pop-up Example) -->
+    <div id="popupMessage" class="message-box">
+      This is a pop-up message shown using JavaScript.
+    </div>
+
+    <script>
+      // Change text of the greeting when button is clicked
+      function changeText() {
+        document.getElementById("greeting").innerHTML = "Hello, JavaScript!";
+      }
+
+      // Show a pop-up message when the button is clicked
+      function showPopup() {
+        alert("This is a pop-up message!");
+      }
+
+      // Change the slider content message when the button is clicked
+      let slideContent = [
+        "Slide to Next Message",
+        "Here is the new message!",
+        "JavaScript makes websites fun!",
+      ];
+      let slideIndex = 0;
+
+      function changeSlide() {
+        slideIndex++;
+        if (slideIndex >= slideContent.length) {
+          slideIndex = 0;
+        }
+        document.getElementById("slider").innerHTML = slideContent[slideIndex];
+      }
+
+      // Real-time update of name entered in the input field
+      function updateName() {
+        let name = document.getElementById("nameInput").value;
+        document.getElementById("nameDisplay").innerHTML =
+          "Hello, " + name + "!";
+      }
+    </script>
+  </body>
+</html>

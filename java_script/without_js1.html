@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Webpage without JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        text-align: center;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      input[type="text"],
+      input[type="email"] {
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .message {
+        margin-top: 20px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Webpage without JavaScript</h1>
+
+    <!-- Button (No JavaScript) -->
+    <button>Click Me for Message (No Action)</button>
+    <p class="message">
+      This is a static page. No action will happen when you click the button.
+    </p>
+
+    <!-- Form without Validation -->
+    <h2>Submit Your Information</h2>
+    <form action="submit_form.php" method="POST">
+      <input type="text" name="name" placeholder="Enter your name" /><br />
+      <input type="email" name="email" placeholder="Enter your email" /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Like Button (No Dynamic Count) -->
+    <h2>Like This Page</h2>
+    <button>Like</button>
+    <p>Likes: This count will not change dynamically without JavaScript.</p>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Webpage with JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        text-align: center;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      input[type="text"],
+      input[type="email"] {
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+      .message {
+        margin-top: 20px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Webpage with JavaScript</h1>
+
+    <!-- Button to show message -->
+    <button onclick="showMessage()">Click Me for Message</button>
+    <p id="message" class="message"></p>
+
+    <!-- Form with validation -->
+    <h2>Submit Your Information</h2>
+    <form id="userForm" onsubmit="return validateForm()">
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+        required
+      /><br />
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formError" class="error"></p>
+
+    <!-- Like Button with count -->
+    <h2>Like This Page</h2>
+    <button onclick="incrementLikeCount()">Like</button>
+    <p id="likeCount">Likes: 0</p>
+
+    <script>
+      // Function to show message when button is clicked
+      function showMessage() {
+        document.getElementById("message").innerHTML =
+          "You clicked the button!";
+      }
+
+      // Function to validate the form fields
+      function validateForm() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let error = "";
+
+        // Basic validation for empty fields
+        if (name === "" || email === "") {
+          error = "All fields are required!";
+        }
+
+        if (error !== "") {
+          document.getElementById("formError").innerText = error;
+          return false; // Prevent form submission if validation fails
+        }
+
+        // Clear error and show success message if form is valid
+        document.getElementById("formError").innerText = "";
+        alert("Form submitted successfully!");
+        return false; // Prevent page reload (form submission) for demo purposes
+      }
+
+      // Function to increment the Like count
+      let likeCount = 0;
+      function incrementLikeCount() {
+        likeCount++;
+        document.getElementById("likeCount").innerText = "Likes: " + likeCount;
+      }
+    </script>
+  </body>
+</html>
