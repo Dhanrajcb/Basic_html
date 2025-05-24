@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>getElementById Example</title>
+  </head>
+  <body>
+    <h1 id="mainHeading">Hello, world!</h1>
+
+    <button onclick="changeText()">Click Me</button>
+
+    <script>
+      function changeText() {
+        // Select the element with id 'mainHeading'
+        const heading = document.getElementById("mainHeading");
+
+        // Change its text content
+        heading.innerText = "You clicked the button!";
+
+        // Change its color
+        heading.style.color = "green";
+      }
+    </script>
+  </body>
+</html>

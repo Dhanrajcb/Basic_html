@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Collect 3 Persons Details Using for Loop</title>
+  </head>
+  <body>
+    <h2>Enter Details for 3 Persons</h2>
+
+    <form id="personForm">
+      <input type="text" id="name" placeholder="Name" required /><br /><br />
+      <input type="email" id="email" placeholder="Email" required /><br /><br />
+      <input type="number" id="age" placeholder="Age" required /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h3>Submitted Persons:</h3>
+    <ul id="peopleList"></ul>
+
+    <script>
+      const form = document.getElementById("personForm");
+      const peopleList = document.getElementById("peopleList");
+      const totalPersons = 3;
+      let people = [];
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Collect data from inputs
+        const person = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          age: form.age.value.trim(),
+        };
+
+        // Validate inputs
+        if (!person.name || !person.email || !person.age) {
+          alert("Please fill out all fields.");
+          return;
+        }
+
+        // Add the person to the array
+        people.push(person);
+
+        // Clear inputs for next person
+        form.reset();
+
+        if (people.length < totalPersons) {
+          alert(
+            `Person ${
+              people.length
+            } details saved. Please enter details for person ${
+              people.length + 1
+            }.`
+          );
+        } else {
+          alert("All persons submitted!");
+
+          // Use a for loop to display all persons
+          for (let i = 0; i < people.length; i++) {
+            const li = document.createElement("li");
+            li.textContent = `Person ${i + 1}: Name=${people[i].name}, Email=${
+              people[i].email
+            }, Age=${people[i].age}`;
+            peopleList.appendChild(li);
+          }
+
+          // Disable form after all entries are done
+          form.querySelector("button").disabled = true;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>getElementsByTagName Example</title>
+  </head>
+  <body>
+    <h1>Heading 1</h1>
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+    <div>This is a div element.</div>
+
+    <button onclick="highlightParagraphs()">Highlight All Paragraphs</button>
+
+    <script>
+      function highlightParagraphs() {
+        // Select all <p> elements
+        const paragraphs = document.getElementsByTagName("p");
+
+        // Loop through all paragraphs and change their background color
+        for (let i = 0; i < paragraphs.length; i++) {
+          paragraphs[i].style.backgroundColor = "yellow";
+          paragraphs[i].innerText += " (highlighted)";
+        }
+      }
+    </script>
+  </body>
+</html>
+(idname)

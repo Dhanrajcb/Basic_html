@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation Example</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="title">Welcome to DOM Manipulation</h2>
+
+    <div id="content">
+      <p class="para">This is a paragraph.</p>
+    </div>
+
+    <button id="changeTextBtn">Change Text Content</button>
+    <button id="changeHTMLBtn">Change HTML Content</button>
+    <button id="changeStyleBtn">Change Style</button>
+    <button id="toggleClassBtn">Toggle Highlight Class</button>
+    <button id="addElementBtn">Add New Element</button>
+    <button id="removeElementBtn">Remove Last Element</button>
+
+    <script>
+      const title = document.getElementById("title");
+      const content = document.getElementById("content");
+
+      // Change text content using innerText
+      document.getElementById("changeTextBtn").addEventListener("click", () => {
+        title.innerText = "Text content changed!";
+      });
+
+      // Change HTML content using innerHTML
+      document.getElementById("changeHTMLBtn").addEventListener("click", () => {
+        content.innerHTML =
+          '<p class="para">Paragraph <strong>with bold text</strong> added via innerHTML.</p>';
+      });
+
+      // Change style dynamically
+      document
+        .getElementById("changeStyleBtn")
+        .addEventListener("click", () => {
+          title.style.color = "blue";
+          title.style.fontSize = "28px";
+        });
+
+      // Add or remove class dynamically
+      document
+        .getElementById("toggleClassBtn")
+        .addEventListener("click", () => {
+          title.classList.toggle("highlight");
+        });
+
+      // Create and add new element dynamically
+      document.getElementById("addElementBtn").addEventListener("click", () => {
+        const newPara = document.createElement("p");
+        newPara.innerText = "This is a new paragraph added dynamically.";
+        newPara.classList.add("para");
+        content.appendChild(newPara);
+      });
+
+      // Remove last child element inside content
+      document
+        .getElementById("removeElementBtn")
+        .addEventListener("click", () => {
+          if (content.lastElementChild) {
+            content.removeChild(content.lastElementChild);
+          } else {
+            alert("No elements left to remove!");
+          }
+        });
+    </script>
+  </body>
+</html>
+(manipulation)

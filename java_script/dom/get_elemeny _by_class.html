@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>getElementsByClassName Example</title>
+    <style>
+      .highlight {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="highlight">This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p class="highlight">This is paragraph 3.</p>
+
+    <button onclick="changeColor()">Change Color of Highlighted Text</button>
+
+    <script>
+      function changeColor() {
+        // Select all elements with class 'highlight'
+        const elements = document.getElementsByClassName("highlight");
+
+        // Loop through the collection and change their color
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].style.color = "blue";
+          elements[i].innerText += " (color changed)";
+        }
+      }
+    </script>
+  </body>
+</html>

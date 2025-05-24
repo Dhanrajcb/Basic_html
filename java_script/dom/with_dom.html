@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Like Button With DOM</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      #likeBtn {
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      #likeBtn:hover {
+        background-color: #0056b3;
+      }
+      #likeCount {
+        font-weight: bold;
+        margin-left: 8px;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Awesome Post</h2>
+    <p>This is a cool post you might like!</p>
+
+    <button id="likeBtn">Like 👍</button>
+    <span>Likes: <span id="likeCount">0</span></span>
+
+    <script>
+      const likeBtn = document.getElementById("likeBtn");
+      const likeCount = document.getElementById("likeCount");
+
+      let likes = 0;
+
+      likeBtn.addEventListener("click", () => {
+        likes++; // Increment like count
+        likeCount.textContent = likes; // Update the displayed count instantly
+      });
+    </script>
+  </body>
+</html>

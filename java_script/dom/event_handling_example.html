@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Handling Example</title>
+  </head>
+  <body>
+    <h1 id="heading">Click the button to change me!</h1>
+    <button id="changeBtn">Click Me</button>
+
+    <script>
+      // Select the button and heading elements
+      const button = document.getElementById("changeBtn");
+      const heading = document.getElementById("heading");
+
+      // Add a click event listener to the button
+      button.addEventListener("click", () => {
+        heading.innerText = "You clicked the button! Text changed.";
+        heading.style.color = "purple";
+      });
+    </script>
+  </body>
+</html>
+(event handling)
